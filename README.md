@@ -9,4 +9,4 @@ Tipbox does not factor the tax into the tip.  If you happen to want to tip for t
 <br><br>
 Tipbox also allows you to save the details of your dinner bill.
 <hr>
-Tipbox uses MVVM Android Architecture to store and display the saved dinner bill history. I followed [Coding in Flow's](https://codinginflow.com) [Android Architecture Components Beginner Tutorial](https://www.youtube.com/playlist?list=PLrnPJCHvNZuDihTpkRs6SpZhqgBqPU118) to learn MVVM.
+Tipbox uses MVVM Android Architecture to store and display the saved dinner bill history. I followed <a href="https://codinginflow.com">Coding in Flow's</a>[Android Architecture Components Beginner Tutorial](https://www.youtube.com/playlist?list=PLrnPJCHvNZuDihTpkRs6SpZhqgBqPU118) to learn MVVM.

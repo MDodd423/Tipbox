@@ -53,4 +53,3 @@ public class NoteViewModel extends AndroidViewModel {
         return allNotesAmountSortedASC;
     }
 }
-

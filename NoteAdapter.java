@@ -17,7 +17,7 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
         super(DIFF_CALLBACK);
     }
 
-    private static final DiffUtil.ItemCallback<Note> DIFF_CALLBACK = new DiffUtil.ItemCallback<Note>() {
+    private static final DiffUtil.ItemCallback<Note> DIFF_CALLBACK = new DiffUtil.ItemCallback<>() {
         @Override
         public boolean areItemsTheSame(Note oldItem, Note newItem) {
             return oldItem.getId() == newItem.getId();
@@ -25,17 +25,14 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
 
         @Override
         public boolean areContentsTheSame(Note oldItem, Note newItem) {
-            return oldItem.getDate().equals(newItem.getDate()) &&
-                    oldItem.getAmount().equals(newItem.getAmount()) &&
-                    oldItem.getLocation().equals(newItem.getLocation());
+            return oldItem.getDate().equals(newItem.getDate()) && oldItem.getAmount().equals(newItem.getAmount()) && oldItem.getLocation().equals(newItem.getLocation());
         }
     };
 
     @NonNull
     @Override
     public NoteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.note_item, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.note_item, parent, false);
         return new NoteHolder(itemView);
     }
 
@@ -43,7 +40,7 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
     public void onBindViewHolder(@NonNull NoteHolder holder, int position) {
         Note currentNote = getItem(position);
         holder.textViewDate.setText(currentNote.getDate());
-        holder.textViewAmount.setText(String.valueOf(currentNote.getAmount()));
+        holder.textViewAmount.setText(currentNote.getAmount());
         holder.textViewLocation.setText(currentNote.getLocation());
     }
 
@@ -51,7 +48,7 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
         return getItem(position);
     }
 
-    class NoteHolder extends RecyclerView.ViewHolder {
+    public class NoteHolder extends RecyclerView.ViewHolder {
         private final TextView textViewDate;
         private final TextView textViewAmount;
         private final TextView textViewLocation;
@@ -62,14 +59,10 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
             textViewAmount = itemView.findViewById(R.id.text_view_amount);
             textViewLocation = itemView.findViewById(R.id.text_view_location);
 
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getAdapterPosition();
-                    if (listener != null && position != RecyclerView.NO_POSITION) {
-                        listener.onItemClick(getItem(position));
-                    }
+            itemView.setOnClickListener(v -> {
+                int position = getAbsoluteAdapterPosition();
+                if (listener != null && position != RecyclerView.NO_POSITION) {
+                    listener.onItemClick(getItem(position));
                 }
             });
         }

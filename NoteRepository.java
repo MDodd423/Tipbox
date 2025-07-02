@@ -11,7 +11,7 @@ class NoteRepository {
     private final NoteDao noteDao;
     private final LiveData<List<Note>> allNotesDateSortedDESC, allNotesDateSortedASC, allNotesAmountSortedDESC, allNotesAmountSortedASC;
 
-    NoteRepository(Application application){
+    NoteRepository(Application application) {
         NoteDatabase database = NoteDatabase.getInstance(application);
         noteDao = database.noteDao();
         allNotesDateSortedDESC = noteDao.getAllNotesDateSortedDESC();
@@ -21,19 +21,19 @@ class NoteRepository {
     }
 
     void insert(Note note) {
-        new InsertNoteAsyncTask(noteDao).execute(note);
+        new InsertNoteAsyncTask(noteDao).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, note);
     }
 
     void update(Note note) {
-        new UpdateNoteAsyncTask(noteDao).execute(note);
+        new UpdateNoteAsyncTask(noteDao).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, note);
     }
 
     void delete(Note note) {
-        new DeleteNoteAsyncTask(noteDao).execute(note);
+        new DeleteNoteAsyncTask(noteDao).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, note);
     }
 
     void deleteAllNotes() {
-        new DeleteAllNotesAsyncTask(noteDao).execute();
+        new DeleteAllNotesAsyncTask(noteDao).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     LiveData<List<Note>> getAllNotesDateSortedDESC() {

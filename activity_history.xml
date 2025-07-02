@@ -3,58 +3,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".HistoryActivity">
 
     <LinearLayout
-        android:id="@+id/toptitles"
+        android:id="@+id/topTitles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginHorizontal="@dimen/eight_dp"
         android:orientation="horizontal"
-        android:padding="8dp"
+        android:padding="@dimen/eight_dp"
         android:weightSum="8">
 
         <TextView
-            android:id="@+id/text_view_date"
+            android:id="@+id/dateTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:onClick="sortDate"
-            android:paddingStart="16dp"
+            android:paddingStart="@dimen/sixteen_dp"
             android:text="@string/title_date"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:ignore="RtlSymmetry" />
 
         <TextView
-            android:id="@+id/text_view_amount"
+            android:id="@+id/amountTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="end"
-            android:onClick="sortAmount"
             android:text="@string/title_amount"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <TextView
-            android:id="@+id/text_view_location"
+            android:id="@+id/locationTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:paddingStart="8dp"
+            android:paddingStart="@dimen/eight_dp"
             android:text="@string/title_location"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:ignore="RtlSymmetry" />
 
     </LinearLayout>
 
     <View
-        android:id="@+id/horzLine"
+        android:id="@+id/horizontalLine"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/margin1"
-        android:background="@color/colorPrimaryDark" />
+        android:layout_height="@dimen/one_dp"
+        android:background="@color/teal_700" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/note_item" />

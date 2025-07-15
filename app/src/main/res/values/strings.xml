@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Tipbox</string>
+    <string name="aTipView_text">Tip Amount:</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_history">History</string>
+    <string name="action_help">Help</string>
+    <string name="action_done">Done</string>
+    <string name="action_delete">Delete All</string>
+    <string name="alert_title_text">Delete</string>
+    <string name="alert_message_text">Are you sure?</string>
+    <string name="alert_positive_text">Yes</string>
+    <string name="alert_negative_text">Cancel</string>
+    <string name="toast_saved_text">Dinner Saved</string>
+    <string name="toast_notsaved_text">Dinner Not Saved</string>
+    <string name="toast_deleted_text">Dinner Deleted</string>
+    <string name="toast_updated_text">Dinner Updated</string>
+    <string name="toast_notupdated_text">Dinner Not Updated</string>
+    <string name="toast_empty_text">Empty Field</string>
+    <string name="toast_invalid_text">Invalid Amount</string>
+    <string name="toast_nomatch_text">Tip Amount Does Not Match</string>
+    <string name="buttonQ_text">\?%</string>
+    <string name="pTipView_text">Tip %:</string>
+    <string name="resetButton_text">Reset</string>
+    <string name="saveButton_text">Save</string>
+    <string name="subTotalView_text">Sub Total</string>
+    <string name="taxView_text">Tax</string>
+    <string name="tipAText_text">Tip $$ (Not %)(Optional)</string>
+    <string name="tipAView_text">Tip Amount</string>
+    <string name="locationText_text">(Saved)</string>
+    <string name="locationView_text">Location</string>
+    <string name="dateView_text">Date</string>
+    <string name="title_date">Date</string>
+    <string name="title_date_up">Date↑</string>
+    <string name="title_date_down">Date↓</string>
+    <string name="title_amount">Amount</string>
+    <string name="title_amount_up">Amount↑</string>
+    <string name="title_amount_down">Amount↓</string>
+    <string name="title_location">Location</string>
+    <string name="totalView_text">Total:</string>
+    <string name="buttontext">%1$s%%</string>
+    <string name="invalidAmount">Invalid Amount</string>
+    <string name="toast_allDeleted_text">All Dinners Deleted</string>
+    <string name="calculator">Calculator</string>
+    <string name="title_activity_main">Tipbox</string>
+    <string name="title_activity_sub">Settings</string>
+    <string name="title_activity_history">History</string>
+    <string name="tip1_cd_text">Tip 1 Amount</string>
+    <string name="tip2_cd_text">Tip 2 Amount</string>
+    <string name="tip3_cd_text">Tip 3 Amount</string>
+    <string name="tip4_cd_text">Tip 4 Amount</string>
+    <string name="sqltext">"%.2f"</string>
+    <string name="ICD_help">Help</string>
+    <string name="ICD_settings">Settings</string>
+    <string name="ICD_history">History</string>
+    <string name="help_dialogue">"When a dinner bill comes it has the Sub Total and Tax above the Total.
+        \nEnter both of those values in the specified fields and press what % you would like to tip.
+        \nTipbox outputs Tip Amount and Total, the two values needed to fill in the rest of the bill.
+        \nTipbox does not factor the tax into the tip.
+        \nIf you know what you want to tip, but are curious what % it is, use the Tip Amount field and the ?% button.
+        \nVery Easy.
+        \nFeedback or Support:\n<a href="https://dodd.tech">https://dodd.tech</a>\n<a href="mailto:tipbox@dodd.tech">tipbox@dodd.tech</a>\n<a href="https://dodd.tech/privacypolicy/tipbox.html">Privacy Policy</a>"</string>
+</resources>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/eight_dp">
+
+        <LinearLayout
+            android:id="@+id/inputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/subTotalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/subtotalEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".6"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:minHeight="48dp"
+                    android:textSize="@dimen/eighteen_sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/subtotalTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:labelFor="@id/subtotalEditText"
+                    android:text="@string/subTotalView_text"
+                    android:textSize="@dimen/eighteen_sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/taxLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/taxEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".6"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:minHeight="48dp"
+                    android:textSize="@dimen/eighteen_sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/taxTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:labelFor="@id/taxEditText"
+                    android:text="@string/taxView_text"
+                    android:textSize="@dimen/eighteen_sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tipQAmountLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/tipQamountEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".6"
+                    android:hint="@string/tipAText_text"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:minHeight="48dp"
+                    android:textSize="@dimen/eighteen_sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/tipQAmountView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="@string/tipAView_text"
+                    android:textSize="@dimen/eighteen_sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/locationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/locationEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".6"
+                    android:hint="@string/locationText_text"
+                    android:inputType="textCapWords"
+                    android:minHeight="48dp"
+                    android:textSize="@dimen/eighteen_sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/locationTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="@string/locationView_text"
+                    android:textSize="@dimen/eighteen_sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/dateEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".6"
+                    android:focusableInTouchMode="false"
+                    android:inputType="date"
+                    android:maxLength="12"
+                    android:minHeight="48dp"
+                    android:textSize="@dimen/eighteen_sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:labelFor="@id/dateEditText"
+                    android:text="@string/dateView_text"
+                    android:textSize="@dimen/eighteen_sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/thirty_two_dp"
+            android:orientation="horizontal"
+            android:weightSum="5.0">
+
+            <Button
+                android:id="@+id/tipQButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:padding="0dp"
+                android:text="@string/buttonQ_text"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/tip1Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/tip1_cd_text"
+                android:padding="0dp"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/tip2Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/tip2_cd_text"
+                android:padding="0dp"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/tip3Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/tip3_cd_text"
+                android:padding="0dp"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/tip4Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/tip4_cd_text"
+                android:padding="0dp"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sixteen_dp"
+            android:layout_marginBottom="@dimen/sixteen_dp"
+            android:max="300"
+            android:progress="150" />
+
+        <LinearLayout
+            android:id="@+id/outputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/three_dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tipPercentViewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tipPercentLabelView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="@string/pTipView_text"
+                    android:textSize="@dimen/eighteen_sp" />
+
+                <TextView
+                    android:id="@+id/tipPercentTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:gravity="end"
+                    android:textSize="@dimen/eighteen_sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tipAmountViewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tipAmountLabelView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="@string/aTipView_text"
+                    android:textSize="@dimen/eighteen_sp" />
+
+                <TextView
+                    android:id="@+id/tipAmountTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:gravity="end"
+                    android:textSize="@dimen/eighteen_sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/totalViewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/totalLabelView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:labelFor="@+id/totalAmountEditText"
+                    android:text="@string/totalView_text"
+                    android:textSize="@dimen/eighteen_sp" />
+
+                <TextView
+                    android:id="@+id/totalAmountTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:gravity="end"
+                    android:textSize="@dimen/eighteen_sp" />
+
+                <EditText
+                    android:id="@+id/totalAmountEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:gravity="end"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:textSize="@dimen/eighteen_sp"
+                    android:visibility="gone"
+                    tools:ignore="Autofill" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sixteen_dp"
+            android:orientation="horizontal"
+            android:weightSum="5.0">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:text="@string/saveButton_text"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:text="@string/resetButton_text"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/TopOptionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/thirty_two_dp"
+            android:layout_marginTop="@dimen/thirty_two_dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/OptionHelpImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/ICD_help"
+                android:src="@drawable/ic_help" />
+
+            <ImageView
+                android:id="@+id/OptionHistoryImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/ICD_history"
+                android:src="@drawable/ic_list" />
+
+            <ImageView
+                android:id="@+id/OptionSettingsImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/ICD_settings"
+                android:src="@drawable/ic_settings" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

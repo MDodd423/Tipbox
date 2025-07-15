@@ -11,6 +11,6 @@ Tipbox also allows you to save the details of your dinner bill.
 <br><br>
 <img src="Tipbox Screenshot.png" width="80%" height="80%"> 
 <hr>
-Tipbox uses MVVM Android Architecture to store and display the saved dinner bill history. I followed <a href="https://codinginflow.com">Coding in Flow's</a> <a href="https://www.youtube.com/playlist?list=PLrnPJCHvNZuDihTpkRs6SpZhqgBqPU118">Android Architecture Components Beginner Tutorial</a> to learn MVVM.
+Tipbox uses MVVM Android Architecture to store and display the saved dinner bill history. I followed <a href="https://codinginflow.com" target="_blank">Coding in Flow's</a> <a href="https://www.youtube.com/@codinginflow" target="_blank">Android Architecture Components Beginner Tutorial</a> to learn MVVM.
 <br><br>
 Tipbox has been updated to include some Kotlin and some Jetpack Compose elements.
